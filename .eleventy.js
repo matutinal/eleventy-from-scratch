@@ -9,6 +9,12 @@ module.exports = (config) => {
 	return sortByDisplayOrder(collection.getFilteredByGlob('./src/work/*.md'));
 });
 
+  // Returns a collection of blog posts in reverse date order
+config.addCollection('blog', (collection) => {
+	return [...collection.getFilteredByGlob('./src/posts/*.md')].reverse();
+});
+
+
 // Returns work items, sorted by display order then filtered by featured
   config.addCollection('featuredWork', (collection) => {
 	return sortByDisplayOrder(collection.getFilteredByGlob('./src/work/*.md')).filter(
