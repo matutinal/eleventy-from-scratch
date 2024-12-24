@@ -20,7 +20,8 @@ module.exports = {
 
 		return response;
 	},
-	  /**
+	
+  /**
    * Filters out the passed item from the passed collection
    * and randomizes and limits them based on flags
    *
